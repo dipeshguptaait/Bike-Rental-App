@@ -2,9 +2,8 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useBikeStore } from '../store/bikeStore';
 import { useBookingStore } from '../store/bookingStore';
-import { useAuthStore } from '../store/authStore';
-import { Alert, Loading } from '../components/Common';
-import { formatCurrency, calculateDuration } from '../utils/formatting';
+import { Alert } from '../components/Common';
+import { calculateDuration, formatCurrency } from '../utils/formatting';
 
 export const BookingPage: React.FC = () => {
   const navigate = useNavigate();

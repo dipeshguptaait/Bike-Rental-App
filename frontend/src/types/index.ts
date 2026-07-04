@@ -4,6 +4,7 @@ export interface User {
   email: string;
   phone: string;
   address: string;
+  createdAt?: string | Date;
 }
 
 export interface AuthResponse {
@@ -29,6 +30,7 @@ export interface Bike {
   condition: string;
   location: string;
   isActive: boolean;
+  bikeType?: BikeType;
 }
 
 export interface BikeWithType extends Bike {

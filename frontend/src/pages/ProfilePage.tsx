@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
-import { Alert, Loading } from '../components/Common';
+import { Alert } from '../components/Common';
 
 export const ProfilePage: React.FC = () => {
   const navigate = useNavigate();

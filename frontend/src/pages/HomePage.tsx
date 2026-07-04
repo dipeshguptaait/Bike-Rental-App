@@ -1,7 +1,7 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore';
-import { Bike, Users, Zap, Shield } from 'lucide-react';
+import { Bike, Zap, Shield } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const { isAuthenticated } = useAuthStore();

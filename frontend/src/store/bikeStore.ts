@@ -1,5 +1,5 @@
 import { create } from 'zustand';
-import { Bike, BikeType, Booking } from '../types/index';
+import { Bike, BikeType } from '../types/index';
 import apiService from '../services/apiService';
 
 interface BikeStore {

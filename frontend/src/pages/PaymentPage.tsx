@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
-import { useAuthStore } from '../store/authStore';
 import { useBookingStore } from '../store/bookingStore';
 import apiService from '../services/apiService';
-import { Alert, Loading } from '../components/Common';
+import { Alert } from '../components/Common';
 import { formatCurrency } from '../utils/formatting';
 
 interface LocationState {
@@ -14,7 +13,6 @@ interface LocationState {
 export const PaymentPage: React.FC = () => {
   const navigate = useNavigate();
   const location = useLocation();
-  const { user } = useAuthStore();
   const { addBooking } = useBookingStore();
   const [isProcessing, setIsProcessing] = useState(false);
   const [error, setError] = useState('');
@@ -55,7 +53,7 @@ export const PaymentPage: React.FC = () => {
 
     try {
       // Process payment
-      const paymentResponse = await apiService.processPayment({
+      await apiService.processPayment({
         bookingId: booking.id,
         amount: totalCost,
         paymentMethod,
@@ -182,7 +180,7 @@ export const PaymentPage: React.FC = () => {
                         }
                         required
                         placeholder="4111 1111 1111 1111"
-                        maxLength="16"
+                        maxLength={16}
                         className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                       />
                     </div>
@@ -203,7 +201,7 @@ export const PaymentPage: React.FC = () => {
                           }
                           required
                           placeholder="MM/YY"
-                          maxLength="5"
+                          maxLength={5}
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                         />
                       </div>
@@ -220,7 +218,7 @@ export const PaymentPage: React.FC = () => {
                           }
                           required
                           placeholder="123"
-                          maxLength="3"
+                          maxLength={3}
                           className="w-full px-4 py-2 border border-gray-300 rounded-lg"
                         />
                       </div>
