@@ -1,7 +1,7 @@
 import axios, { AxiosInstance } from 'axios';
 import { AuthResponse, BikeType, Bike, Booking, Payment, ApiResponse } from '../types/index';
 
-const API_URL = ' https://bike-rental-backend-slhs.onrender.com';
+const API_URL = ' https://bike-rental-backend-slhs.onrender.com/api';
 
 class ApiService {
   private api: AxiosInstance;
