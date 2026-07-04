@@ -13,7 +13,7 @@ connectDB();
 
 // Middleware
 app.use(cors({
-    origin: 'https://dipeshguptaait.github.io' //my frontend url
+    origin: 'https://bike-rental-frontend-w39c.onrender.com' //my frontend url
 
 }));
 app.use(express.json());
