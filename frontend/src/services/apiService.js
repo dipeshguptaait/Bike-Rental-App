@@ -1,5 +1,5 @@
 import axios from 'axios';
-const API_URL = ' https://bike-rental-backend-slhs.onrender.com';
+const API_URL = ' https://bike-rental-backend-slhs.onrender.com/api';
 class ApiService {
     constructor() {
         Object.defineProperty(this, "api", {
